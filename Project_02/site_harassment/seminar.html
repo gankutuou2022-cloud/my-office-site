@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-config="officeName"> | セミナーメニュー</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .seminar-item {
+            background: #fff;
+            padding: 60px;
+            border: 1px solid var(--color-line);
+            margin-bottom: 40px;
+        }
+
+        .seminar-tag {
+            color: var(--color-secondary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .seminar-price {
+            font-family: var(--font-number);
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+
+        .seminar-note {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header" style="position: relative; background: #fff;">
+        <div class="container header-inner">
+            <div class="logo serif" data-config="officeName">研究所名</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Profile</a></li>
+                    <li><a href="seminar.html" class="nav-link">Seminar</a></li>
+                    <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="background: var(--color-bg-alt);">
+            <div class="container">
+                <span
+                    style="display: block; text-align: center; color: var(--color-secondary); font-weight: 700; margin-bottom: 1rem;">SEMINAR
+                    & TRAINING</span>
+                <h1 class="serif" style="font-size: 3.5rem; text-align: center; margin-bottom: 4rem;">研修・セミナーメニュー</h1>
+
+                <div class="seminar-item">
+                    <span class="seminar-tag">TOP PRIORITY</span>
+                    <h2 class="serif" data-config="pricing.kasuhara.label"></h2>
+                    <p>カスタマーハラスメント（カスハラ）対策の義務化に対応。条例適合から、現場でのクレーム対応・心理的負担の軽減まで、具体的かつ実践的なプログラムを提供します。</p>
+                    <div class="seminar-price" data-config="pricing.kasuhara.price"></div>
+                    <p class="seminar-note" data-config="pricing.kasuhara.note"></p>
+                </div>
+
+                <div class="seminar-item">
+                    <span class="seminar-tag">MANAGEMENT</span>
+                    <h2 class="serif" data-config="pricing.pawahara.label"></h2>
+                    <p>管理職が陥りがちな「指導」と「パワハラ」の境界線をクリアにします。部下の生産性を下げないための、適切なコミュニケーション手法をロールプレイ形式で学びます。</p>
+                    <div class="seminar-price" data-config="pricing.pawahara.price"></div>
+                    <p class="seminar-note" data-config="pricing.pawahara.note"></p>
+                </div>
+
+                <div class="seminar-item">
+                    <span class="seminar-tag">ORGANIZATION</span>
+                    <h2 class="serif" data-config="pricing.safety.label"></h2>
+                    <p>ハラスメントが起きない土壌を作る、組織開発プログラム。心理的安全性を高めることで、離職を防ぎ、自由な発想が生まれる職場環境への変革をサポートします。</p>
+                    <div class="seminar-price" data-config="pricing.safety.price"></div>
+                    <p class="seminar-note" data-config="pricing.safety.note"></p>
+                </div>
+
+                <div class="seminar-item" style="border-style: dashed;">
+                    <span class="seminar-tag">CONSULTING</span>
+                    <h2 class="serif" data-config="pricing.compliance.label"></h2>
+                    <p>研修だけでなく、年間を通じた制度構築の伴走。就業規則の改訂から相談窓口の外部設置まで、組織のコンプライアンスを総合的に強化します。</p>
+                    <div class="seminar-price" data-config="pricing.compliance.price"></div>
+                    <p class="seminar-note" data-config="pricing.compliance.note"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-primary); color: #fff; padding: 60px 0; margin-top: 0;">
+        <div class="container" style="text-align: center;">
+            <p style="font-size: 0.8rem; opacity: 0.6;">&copy; <span data-config="officeName"></span> All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="../site/js/main.js"></script>
+</body>
+
+</html>

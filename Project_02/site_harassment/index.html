@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" data-config="siteDescription">
+    <title data-config="siteTitle">読み込んでいます...</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo serif" data-config="officeName">研究所名</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Profile</a></li>
+                    <li><a href="seminar.html" class="nav-link">Seminar</a></li>
+                    <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <h1 class="hero-title serif" data-config="catchphrase">キャッチコピー</h1>
+                <p class="hero-subtitle" data-config="subCatchphrase">サブコピー</p>
+                <a href="contact.html" class="btn-outline">研修・講演の依頼をする</a>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <div class="stat-num"><span data-config="stats.seminars">0</span></div>
+                    <div class="stat-label">登壇実績（回）</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num"><span data-config="stats.trainees">0</span></div>
+                    <div class="stat-label">受講者累計（名）</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num"><span data-config="stats.years">0</span></div>
+                    <div class="stat-label">専門キャリア（年）</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="serif" style="text-align: center; margin-bottom: 2rem;">重点対応テーマ</h2>
+                <p style="text-align: center; color: var(--color-text-light); margin-bottom: 3rem;">
+                    企業の社会的責任と、従業員の持続可能な成長を両立させるためのアプローチ。</p>
+
+                <div class="theme-grid" id="themes-list">
+                    <!-- JSで注入 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: var(--color-primary); color: #fff; padding: 100px 0;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <h2 class="serif" data-config="officeName" style="font-size: 1.5rem; margin-bottom: 1rem;"></h2>
+                    <p style="opacity: 0.7;" data-config="address"></p>
+                    <p style="font-size: 1.2rem; margin-top: 20px;" data-config="tel"></p>
+                </div>
+                <div>
+                    <a href="contact.html" class="btn-outline"
+                        style="border-color: #fff; color: #fff; margin-top: 0;">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <!-- Harassment版 main.js (テーマ注入ロジック追加) -->
+    <script src="../site/js/main.js"></script>
+    <script>
+        // ハラスメント版特有のリスト注入
+        document.addEventListener('DOMContentLoaded', () => {
+            const themesList = document.getElementById('themes-list');
+            if (themesList && OFFICE_CONFIG.themes) {
+                OFFICE_CONFIG.themes.forEach(theme => {
+                    const card = document.createElement('div');
+                    card.className = 'theme-card';
+                    card.innerHTML = `<h3 class="serif">${theme}</h3><p style="font-size: 0.9rem; opacity: 0.7;">最新のガイドラインに基づき、組織の実情に合わせた具体的な対策と教育をパッケージで提供します。</p>`;
+                    themesList.appendChild(card);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

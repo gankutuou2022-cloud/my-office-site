@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-config="officeName"> | お問い合わせ・ご依頼</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 100px;
+            margin-top: 60px;
+        }
+
+        .label {
+            font-size: 0.8rem;
+            color: var(--color-secondary);
+            font-weight: 700;
+            border-bottom: 1px solid var(--color-line);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .val {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header" style="position: relative; background: #fff;">
+        <div class="container header-inner">
+            <div class="logo serif" data-config="officeName">研究所名</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Profile</a></li>
+                    <li><a href="seminar.html" class="nav-link">Seminar</a></li>
+                    <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="serif" style="font-size: 3.5rem; text-align: center; margin-bottom: 2rem;">ご相談・ご依頼</h1>
+                <p style="text-align: center; color: var(--color-text-light); max-width: 700px; margin: 0 auto;">
+                    研修・講演の依頼、コンサルティングのご相談などは、下記フォームまたはお電話にて承っております。<br>概算のお見積もりも初回相談にて承ります。</p>
+
+                <div class="contact-grid">
+                    <div>
+                        <h2 class="serif" style="margin-bottom: 3rem;">Direct Contact</h2>
+
+                        <div class="info-group">
+                            <span class="label">お電話</span>
+                            <div class="val" data-config="tel"></div>
+                        </div>
+
+                        <div class="info-group">
+                            <span class="label">メール</span>
+                            <div class="val"><a href="mailto:" data-config="email"></a></div>
+                        </div>
+
+                        <div class="info-group">
+                            <span class="label">初回特典</span>
+                            <div class="val" data-config="firstConsult"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="serif" style="margin-bottom: 3rem;">Request Form</h2>
+                        <div id="google-form-container"
+                            style="background: var(--color-bg-alt); padding: 40px; border: 1px solid var(--color-line); min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                            <p style="color: var(--color-text-light);">フォームを読み込み中...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-primary); color: #fff; padding: 60px 0; margin-top: 0;">
+        <div class="container" style="text-align: center;">
+            <p style="font-size: 0.8rem; opacity: 0.6;">&copy; <span data-config="officeName"></span> All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="../site/js/main.js"></script>
+</body>
+
+</html>

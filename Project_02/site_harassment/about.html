@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" data-config="siteDescription">
+    <title data-config="officeName"> | プロフィール</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header" style="position: relative; background: #fff;">
+        <div class="container header-inner">
+            <div class="logo serif" data-config="officeName">研究所名</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">Profile</a></li>
+                    <li><a href="seminar.html" class="nav-link">Seminar</a></li>
+                    <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container" style="display: flex; gap: 80px; align-items: flex-start; flex-wrap: wrap;">
+                <div style="flex: 0.7; min-width: 300px;">
+                    <div
+                        style="background: var(--color-bg-alt); aspect-ratio: 4/5; border: 1px solid var(--color-line);">
+                        <p style="padding: 40px; text-align: center; color: var(--color-text-light);">[ 講師の宣材写真が入ります ]
+                        </p>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h1 class="serif" style="font-size: 3rem; margin-bottom: 0.5rem;" data-config="ownerName"></h1>
+                    <p style="color: var(--color-secondary); font-weight: 700; font-size: 1.1rem; margin-bottom: 2rem;"
+                        data-config="ownerTitle"></p>
+
+                    <h2 class="serif"
+                        style="font-size: 1.5rem; border-left: 4px solid var(--color-secondary); padding-left: 15px; margin-bottom: 1.5rem;">
+                        Mission & Philosophy</h2>
+                    <p>「ハラスメント対策は、コストではなく未来への投資である」</p>
+                    <p>私は15年以上、企業の現場でハラスメント問題に向き合ってきました。法改正への対応はもちろん不可欠ですが、真に目指すべきは「誰もが自分の言葉で語り、安心して能力を発揮できる組織」の構築です。
+                    </p>
+                    <p>労働法務の専門家（特定社労士）としての知見と、心理的的安全性をベースとした組織開発の視点を組み合わせ、単なる『禁止事項の共有』に終わらない、心に響く研修を提供しています。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--color-bg-alt);">
+            <div class="container">
+                <h2 class="serif" style="text-align: center; margin-bottom: 4rem;">略歴・資格</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div
+                        style="display: flex; gap: 40px; margin-bottom: 2rem; border-bottom: 1px solid var(--color-line); padding-bottom: 2rem;">
+                        <div style="font-family: var(--font-number); font-size: 1.5rem; color: var(--color-secondary);">
+                            Biography</div>
+                        <div>
+                            <p style="font-weight: 700; margin-bottom: 0.5rem;">専門キャリア <span
+                                    data-config="stats.years"></span>年</p>
+                            <p style="font-size: 0.95rem;">
+                                大学卒業後、大手金融機関の人事部門を経て社会保険労務士として独立。ハラスメント対策に特化したコンサルティングを開始し、自治体・上場企業を中心に延べ<span
+                                    data-config="stats.seminars"></span>回以上の登壇実績を持つ。</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 40px;">
+                        <div style="font-family: var(--font-number); font-size: 1.5rem; color: var(--color-secondary);">
+                            Credentials</div>
+                        <ul style="font-size: 0.95rem; line-height: 2;">
+                            <li>・特定社会保険労務士</li>
+                            <li>・ハラスメント対策アドバイザー</li>
+                            <li>・メンタルヘルス・マネジメント検定Ⅰ種</li>
+                            <li>・日本産業カウンセラー協会正会員</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: var(--color-primary); color: #fff; padding: 60px 0; margin-top: 100px;">
+        <div class="container" style="text-align: center;">
+            <p style="font-size: 0.8rem; opacity: 0.6;">&copy; <span data-config="officeName"></span> All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="../site/js/main.js"></script>
+</body>
+
+</html>

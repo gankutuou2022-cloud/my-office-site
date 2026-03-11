@@ -1,0 +1,15 @@
+# OS generated files (Updated by Antigravity)
+Thumbs.db
+Desktop.ini
+
+# Node modules
+node_modules/
+
+# Cloudflare Wrangler
+.wrangler/
+dist/
+
+# Env files
+.env
+.env.local
+.projects_list.tmp

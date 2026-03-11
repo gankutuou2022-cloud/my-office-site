@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Design Spec: Harassment Expert / Lecturer Variant
+   ========================================================================== */
+
+:root {
+    /* Colors - Deep, Intellectual, Authoritative */
+    --color-primary: #162a4a;
+    /* Deep Navy */
+    --color-secondary: #1e6b6b;
+    /* Deep Teal - Stability/Psychological Safety */
+    --color-accent: #d4af37;
+    /* Muted Gold */
+    --color-bg: #ffffff;
+    --color-bg-alt: #f4f7f9;
+    --color-text: #1a1a1a;
+    --color-text-light: #4a4a4a;
+    --color-line: #d1d9e0;
+    --color-white: #ffffff;
+
+    /* Typography */
+    --font-serif: 'Noto Serif JP', serif;
+    --font-sans: 'Noto Sans JP', sans-serif;
+    --font-number: 'Cormorant Garamond', serif;
+
+    /* Spacing */
+    --section-padding: 120px 0;
+    --container-width: 1000px;
+    --header-height: 90px;
+
+    /* Others */
+    --transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    --border-radius: 0px;
+    /* Sharp corners for authority */
+}
+
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* Typography Overrides */
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header */
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 0.1em;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-link:hover {
+    color: var(--color-secondary);
+}
+
+/* Hero Section - High Impact */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg-alt);
+    padding-top: var(--header-height);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.hero-inner {
+    position: relative;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    border-left: 4px solid var(--color-secondary);
+    padding-left: 24px;
+}
+
+/* Buttons */
+.btn-outline {
+    display: inline-block;
+    padding: 20px 50px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-top: 3rem;
+    letter-spacing: 0.1em;
+}
+
+.btn-outline:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 80px 0;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-item .stat-num {
+    font-family: var(--font-number);
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+.stat-item .stat-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Theme Cards */
+.theme-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background-color: var(--color-line);
+    margin-top: 4rem;
+}
+
+.theme-card {
+    background: #fff;
+    padding: 60px 40px;
+}
+
+.theme-card h3 {
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .stats-grid,
+    .theme-grid {
+        grid-template-columns: 1fr;
+    }
+}
